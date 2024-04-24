@@ -1,0 +1,226 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(210, 46%, 95%);
+    min-height: 100vh;
+}
+
+p{
+    font-family: "Barlow Semi Condensed";
+    font-size: 13px;
+}
+
+h3{
+    font-family: "Barlow Semi Condensed";
+    font-weight: 500;
+    font-size: 19.4px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1035px;
+    /* height: 575px; */
+    grid-template-areas: "one one two four"
+    "one2 two2 two2 four";
+    /* grid-template-rows: 284px 266px; */
+    gap: 20px;
+}
+
+#kira{
+    grid-area: three;
+}
+
+#patrick p,
+#jonathan p,
+#daniel p,
+#daniel h3,
+#patrick h3,
+#jonathan h3{
+    color: white;
+}
+
+#jeanette h3,
+#kira h3{
+    opacity: 80%;
+}
+ 
+#patrick{
+    grid-area: two2;
+    background-color: hsl(219, 29%, 14%);
+}
+
+#jonathan{
+    grid-area: two;
+    background-color: hsl(217, 19%, 35%);
+}
+
+#daniel{
+    grid-area: one;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url('../imagens/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 0%;
+}
+
+#jeanette{
+    grid-area: one2;
+    background-color: white;
+}
+
+#kira{
+    grid-area: four;
+    background-color: white;
+}
+
+
+.group-white p{
+    color: white;
+}
+
+main .teste{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+main .teste:hover{
+    transform: scale(1.05); 
+}
+
+main .teste .user{
+    display: flex;
+    align-items: center;
+}
+
+main .teste .user img{
+    border-radius: 50%;
+    width: 30px;
+    flex: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.name-user{
+    margin-left: 15px;
+}
+
+.user .name-user .name-name-user,
+.user .name-user .verified-user{
+    margin: 0;
+    padding: 0;
+}
+
+
+.name-name-user{
+    font-weight: 600;
+    opacity: 80%;
+}
+
+.verified-user{
+    opacity: 50%;
+}
+
+/* .inter-ex-ex{
+    background-image: url('../imagens/bg-pattern-quotation.svg');
+
+} */
+
+.inter-ex{
+    margin: 25px;
+}
+
+.public-para{
+    opacity: 70%;
+}
+
+
+#daniel img{
+    border: 2px solid hsl(263, 85%, 71%);
+}
+
+#patrick img{
+    border: 2px solid hsl(263, 55%, 52%);
+}
+
+@media (max-width: 855px){
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main{
+        width: 95%; 
+        grid-template-areas:"one one two"
+        "one2 two2 two" "one3 one3 one3";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #patrick{
+        grid-area: one3;
+    }
+    #kira{
+        grid-area: two;
+    }
+    #daniel{
+        grid-area: one;
+    }
+    #jeanette{
+        grid-area: one2;
+    }
+
+    #jonathan{
+        grid-area: two2;
+    }
+} 
+
+@media (max-width: 700px){
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main{
+        width: 95%; 
+        grid-template-areas:"one one"
+        "one2 two2" "one3 one3"
+        "two3 two3";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #patrick{
+        grid-area: one3;
+    }
+    #kira{
+        grid-area: two3;
+    }
+    #daniel{
+        grid-area: one;
+    }
+    #jeanette{
+        grid-area: one2;
+    }
+
+    #jonathan{
+        grid-area: two2;
+    }
+}  
+
+@media (max-width: 450px){
+    section{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    main{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+}
